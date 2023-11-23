@@ -55,7 +55,7 @@ jobs:
 
       - name: 'TEST ONLY: change scope from @prisma to @aqrln'
         run: |
-          sed -i '' 's|"name": "@prisma/query-engine-wasm"|"name": "@aqrln/query-engine-wasm"|g' package.json
+          sed -i 's|"name": "@prisma/query-engine-wasm"|"name": "@aqrln/query-engine-wasm"|g' package.json
         working-directory: ./query-engine/query-engine-wasm/pkg
 
       - name: Publish @prisma/query-engine-wasm

@@ -3,10 +3,6 @@ run-name: npm - release @prisma/query-engine-wasm@${{ github.event.inputs.engine
 
 concurrency: publish-query-engine-wasm
 
-permissions:
-  # https://docs.npmjs.com/generating-provenance-statements
-  id-token: write
-
 on:
   # usually triggered via GH Actions Workflow in prisma/engines-wrapper repo
   workflow_dispatch:
@@ -63,7 +59,7 @@ jobs:
         working-directory: ./query-engine/query-engine-wasm/pkg
 
       - name: Publish @prisma/query-engine-wasm
-        run: npm publish --provenance --access public --tag ${{ github.event.inputs.npmDistTag }}
+        run: npm publish provenance --access public --tag ${{ github.event.inputs.npmDistTag }}
         working-directory: ./query-engine/query-engine-wasm/pkg
 
       #

@@ -10,12 +10,14 @@ on:
       packageVersion:
         required: true
         description: 'New @prisma/query-engine-wasm package version'
+        default: '0.6.2-integration.1' # TODO: delete me
       enginesHash:
         required: true
         description: 'prisma-engines commit to build'
+        default: '65566c5ccb2c82021f9635d4260a088732847214' # TODO: delete me
       npmDistTag:
         required: true
-        default: 'latest'
+        default: 'integration' # TODO: change to 'latest'
         description: 'npm dist-tag (e.g. latest or integration)'
 
 jobs:

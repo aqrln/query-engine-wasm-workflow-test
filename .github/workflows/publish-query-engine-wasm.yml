@@ -59,7 +59,7 @@ jobs:
         working-directory: ./query-engine/query-engine-wasm/pkg
 
       - name: Publish @prisma/query-engine-wasm
-        run: npm publish provenance --access public --tag ${{ github.event.inputs.npmDistTag }}
+        run: npm publish --access public --tag ${{ github.event.inputs.npmDistTag }}
         working-directory: ./query-engine/query-engine-wasm/pkg
 
       #

@@ -30,6 +30,7 @@ jobs:
 
       - uses: actions/checkout@v4
         with:
+          repository: prisma/prisma-engines # TODO: delete me
           ref: ${{ github.event.inputs.enginesHash }}
 
       - name: Install Rust toolchain

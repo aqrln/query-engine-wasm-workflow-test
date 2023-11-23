@@ -3,6 +3,10 @@ run-name: npm - release @prisma/query-engine-wasm@${{ github.event.inputs.engine
 
 concurrency: publish-query-engine-wasm
 
+permissions:
+  # https://docs.npmjs.com/generating-provenance-statements
+  id-token: write
+
 on:
   # usually triggered via GH Actions Workflow in prisma/engines-wrapper repo
   workflow_dispatch:
